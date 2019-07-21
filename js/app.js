@@ -38,7 +38,7 @@ window.onload = function(){
 		card.className = 'card';
 		let img = document.createElement('img');
 		img.className = 'avatar';
-		img.setAttribute('src', employee.picture.thumbnail)
+		img.setAttribute('src', employee.picture.large)
 		card.appendChild(img);
 		let name = document.createElement('h2');
 		name.className = 'name';
@@ -107,7 +107,7 @@ window.onload = function(){
 		//
 		let img = document.createElement('img');
 		img.className = 'avatar';
-		img.setAttribute('src', employee.picture.thumbnail)
+		img.setAttribute('src', employee.picture.large)
 		modal.appendChild(img);
 		let name = document.createElement('h2');
 		name.className = 'name';

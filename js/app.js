@@ -16,7 +16,10 @@ window.onload = function(){
 		  });
 	}
 	//search function
-
+	document.getElementById('overlay').addEventListener('click', function() {
+		console.log('works')
+		overlay.style.display = 'none';
+	})
 	document.getElementById('employeeSearch').addEventListener('keyup', function() {
 		employees = [];
 		document.getElementById('employeeThumbnailContainer').innerHTML = '';
@@ -38,24 +41,29 @@ window.onload = function(){
 		card.className = 'card';
 		let img = document.createElement('img');
 		img.className = 'avatar';
-		img.setAttribute('src', employee.picture.large)
+		img.setAttribute('src', employee.picture.large);
 		card.appendChild(img);
+		let txtWrap = document.createElement('div');
+		txtWrap.className = ('text-container');
 		let name = document.createElement('h2');
 		name.className = 'name';
 		name.innerHTML = employee.name.first + ' ' + employee.name.last;
-		card.appendChild(name);
+		txtWrap.appendChild(name);
 		let email = document.createElement('a');
 		email.className = 'email';
 		email.setAttribute('href', 'mailto:' + employee.email)
 		email.innerHTML = employee.email;
-		card.appendChild(email);
+		txtWrap.appendChild(email);
 		let city = document.createElement('p');
 		city.className = 'city';
 		city.innerHTML = employee.location.city
-		card.appendChild(city);
-
+		txtWrap.appendChild(city);
+		card.appendChild(txtWrap);
 		//click handler to open the modal
 		card.onclick = function() {
+			drawEmployeeModal(employee, i);
+		}
+		img.onclick = function() {
 			drawEmployeeModal(employee, i);
 		}
 
@@ -81,7 +89,8 @@ window.onload = function(){
 		//left btn
 		let leftBtn = document.createElement('i');
 		leftBtn.className = 'fas fa-chevron-left';
-		leftBtn.onclick = function() {
+		leftBtn.onclick = function(e) {
+			e.stopPropagation();
 			if(i == 0) {
 				var prevEmployee = employees.length -1;
 				//using var so the variable will be available after the if statement
@@ -94,7 +103,9 @@ window.onload = function(){
 		//right btn
 		let rightBtn = document.createElement('i');
 		rightBtn.className = 'fas fa-chevron-right';
-		rightBtn.onclick = function() {
+		rightBtn.onclick = function(e) {
+			e.stopPropagation();
+			console.log(e)
 			if(i == employees.length -1) {
 				var nextEmployee = 0;
 				//using var so the variable will be available after the if statement

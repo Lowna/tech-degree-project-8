@@ -1,12 +1,17 @@
 #header {
 	display: flex;
+	align-items: center;
+	margin: 0 20px;
 }
 #headerTitle {
 	flex-grow: 1;
 }
-#header input button {
-	padding: 1em;
+#header input {
+	height: 40px;
+	padding-left: 25px;
+	flex-grow: 1;
 }
+
 #employeeThumbnailContainer {
 	display: grid;
 	justify-items: center;

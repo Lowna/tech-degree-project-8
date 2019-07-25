@@ -1,0 +1,26 @@
+
+.card {
+	width: 80%;
+	height: auto;
+	background-color: $white;
+	border: 2px solid $brdrColor;
+    border-radius: 10px;
+	padding: 1em;
+	margin-bottom: 30px;
+	display: flex;
+
+}
+.card a {
+	text-decoration: none;
+}
+.card img {
+	border-radius: 50%;	
+}
+.modal {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	background: $white;
+	padding: 2em;
+}

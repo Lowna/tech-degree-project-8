@@ -12,7 +12,10 @@
 }
 .avatar {
 	border-radius: 50%;
-	padding: 1em;
+	width: 25%;
+	height: 25%;
+	margin-left: 10px;
+	align-self: center;
 }
 .modal {
 	text-align: center;
@@ -48,4 +51,7 @@
 .modal a {
 	text-decoration: none;
 	color: $cardPara;
+}
+.modal .fa-times {
+	margin-top: 10px;
 }

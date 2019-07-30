@@ -208,12 +208,12 @@ select {
 #employeeThumbnailContainer {
   width: 90%;
   display: grid;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 35px;
   justify-content: center;
   justify-items: center;
-  grid-gap: 20px;
+  grid-gap: 40px;
 }
 
 @media (min-width: 768px) {
@@ -221,7 +221,7 @@ select {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   #employeeThumbnailContainer {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -236,7 +236,8 @@ select {
 .text-container {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 0.5em;
+  margin-left: 30px;
 }
 
 .text-container h2 {
@@ -288,7 +289,10 @@ select {
 
 .avatar {
   border-radius: 50%;
-  padding: 1em;
+  width: 25%;
+  height: 25%;
+  margin-left: 10px;
+  align-self: center;
 }
 
 .modal {
@@ -330,6 +334,10 @@ select {
 .modal a {
   text-decoration: none;
   color: #83898d;
+}
+
+.modal .fa-times {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,3 +6,29 @@
 	color: $headerColor;
 	font-weight: 600;
 }
+.text-container {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	
+}
+
+.text-container h2 {
+	color: $cardHeader;
+	font-size: 1.25em;
+}
+
+.text-container p {
+	color: $cardPara;
+	font-size: 1em;
+}
+.text-container a {
+	color: $cardPara;
+	font-size: 1em;
+}
+.modal .name {
+	color: $cardHeader;
+}
+.modal p {
+	color: $cardPara;
+}

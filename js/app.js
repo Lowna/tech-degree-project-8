@@ -78,14 +78,13 @@ window.onload = function(){
 
 		//employee modal info
 		let modal = document.createElement('div');
-		modal.className = 'modal';
-		//close btn
-		let closeBtn = document.createElement('i');
-		closeBtn.className = 'fas fa-times';
-		closeBtn.onclick = function() {
-			overlay.style.display = 'none';
-		}
-		modal.appendChild(closeBtn);
+		modal.className = ('modal');
+		
+
+		let btnWrap = document.createElement('div');
+		btnWrap.className = ('btn-wrap');
+		
+		
 		//left btn
 		let leftBtn = document.createElement('i');
 		leftBtn.className = 'fas fa-chevron-left';
@@ -100,6 +99,13 @@ window.onload = function(){
 			drawEmployeeModal(employees[prevEmployee], prevEmployee)
 		}
 		modal.appendChild(leftBtn);
+		btnWrap.appendChild(leftBtn);
+		//img
+		let img = document.createElement('img');
+		img.className = 'avatar';
+		img.setAttribute('src', employee.picture.large)
+		modal.appendChild(img);
+		btnWrap.appendChild(img)
 		//right btn
 		let rightBtn = document.createElement('i');
 		rightBtn.className = 'fas fa-chevron-right';
@@ -115,11 +121,16 @@ window.onload = function(){
 			drawEmployeeModal(employees[nextEmployee], nextEmployee)
 		}
 		modal.appendChild(rightBtn);
-		//
-		let img = document.createElement('img');
-		img.className = 'avatar';
-		img.setAttribute('src', employee.picture.large)
-		modal.appendChild(img);
+		btnWrap.appendChild(rightBtn);
+		modal.appendChild(btnWrap)
+		//close btn
+		let closeBtn = document.createElement('i');
+		closeBtn.className = 'fas fa-times';
+		closeBtn.onclick = function() {
+			overlay.style.display = 'none';
+		}
+		modal.appendChild(closeBtn);
+		
 		let name = document.createElement('h2');
 		name.className = 'name';
 		name.innerHTML = employee.name.first + ' ' + employee.name.last;

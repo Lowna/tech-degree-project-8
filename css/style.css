@@ -279,6 +279,7 @@ select {
   border-radius: 10px;
   display: flex;
   width: 100%;
+  cursor: pointer;
 }
 
 .card a {
@@ -323,6 +324,7 @@ select {
 .modal .fas {
   font-size: 1.5em;
   color: #404a51;
+  cursor: pointer;
 }
 
 .modal a {

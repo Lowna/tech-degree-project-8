@@ -32,3 +32,11 @@
 .modal p {
 	color: $cardPara;
 }
+@media (min-width: 768px) {
+	.text-container {
+		margin-left: 10px;
+	}
+	.text-container a {
+		font-size: .8em;
+	}
+}

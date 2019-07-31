@@ -263,6 +263,15 @@ select {
   color: #83898d;
 }
 
+@media (min-width: 768px) {
+  .text-container {
+    margin-left: 10px;
+  }
+
+  .text-container a {
+    font-size: 0.8em;
+  }
+}
 #overlay {
   position: fixed;
   top: 0;

@@ -239,17 +239,14 @@ select {
   padding: 0.5em;
   margin-left: 30px;
 }
-
 .text-container h2 {
   color: #404a51;
   font-size: 1.25em;
 }
-
 .text-container p {
   color: #83898d;
   font-size: 1em;
 }
-
 .text-container a {
   color: #83898d;
   font-size: 1em;
@@ -267,7 +264,6 @@ select {
   .text-container {
     margin-left: 10px;
   }
-
   .text-container a {
     font-size: 0.8em;
   }

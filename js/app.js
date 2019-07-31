@@ -35,7 +35,6 @@ window.onload = function(){
 	    });
 	});
 	function drawEmployeeCard(employee, i) {
-
 		//employee card info
 		let card = document.createElement('div');
 		card.className = 'card';

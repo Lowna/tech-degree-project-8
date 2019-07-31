@@ -17,7 +17,6 @@ window.onload = function(){
 	}
 	//search function
 	document.getElementById('overlay').addEventListener('click', function() {
-		console.log('works')
 		overlay.style.display = 'none';
 	})
 	document.getElementById('employeeSearch').addEventListener('keyup', function() {
@@ -110,7 +109,6 @@ window.onload = function(){
 		rightBtn.className = 'fas fa-chevron-right';
 		rightBtn.onclick = function(e) {
 			e.stopPropagation();
-			console.log(e)
 			if(i == employees.length -1) {
 				var nextEmployee = 0;
 				//using var so the variable will be available after the if statement

@@ -77,7 +77,9 @@ window.onload = function(){
 		//employee modal info
 		let modal = document.createElement('div');
 		modal.className = ('modal');
-		
+		modal.onclick = function(e) {
+			e.stopPropagation();
+		}
 
 		let btnWrap = document.createElement('div');
 		btnWrap.className = ('btn-wrap');
@@ -87,7 +89,7 @@ window.onload = function(){
 		let leftBtn = document.createElement('i');
 		leftBtn.className = 'fas fa-chevron-left';
 		leftBtn.onclick = function(e) {
-			e.stopPropagation();
+			//e.stopPropagation();
 			if(i == 0) {
 				var prevEmployee = employees.length -1;
 				//using var so the variable will be available after the if statement
@@ -108,7 +110,7 @@ window.onload = function(){
 		let rightBtn = document.createElement('i');
 		rightBtn.className = 'fas fa-chevron-right';
 		rightBtn.onclick = function(e) {
-			e.stopPropagation();
+			//e.stopPropagation();
 			if(i == employees.length -1) {
 				var nextEmployee = 0;
 				//using var so the variable will be available after the if statement
